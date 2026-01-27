@@ -508,6 +508,7 @@ body {
 
 .section {
   margin-bottom: 4rem;
+  scroll-margin-top: 80px;
 }
 
 .section h2 {
