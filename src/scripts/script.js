@@ -1,59 +1,126 @@
-document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('myTopnav')) {
-    function myFunction() {
-      var x = document.getElementById('myTopnav');
-      if (x.className === 'topnav') {
-        x.className += ' responsive';
-      } else {
-        x.className = 'topnav';
-      }
-    }
-    window.myFunction = myFunction;
+// Simple hamburger menu toggle
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  
+  if (!hamburger || !navMenu) {
+    console.error('Hamburger or nav menu element not found');
+    return;
   }
+
+  // Toggle menu on hamburger click
+  hamburger.addEventListener('click', function() {
+    console.log('Hamburger clicked');
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Close menu when any nav link is clicked
+  const navLinks = navMenu.querySelectorAll('a');
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.main-nav')) {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    }
+  });
+})();
+
+// Theme toggle functionality
+(function() {
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem('theme') || 'light-mode';
+  
+  // Apply saved theme on page load
+  if (currentTheme === 'dark-mode') {
+    body.classList.add('dark-mode');
+    updateThemeIcon(true);
+  }
+
+  // Handle theme toggle click
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+      
+      const isDarkMode = body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDarkMode ? 'dark-mode' : 'light-mode');
+      updateThemeIcon(isDarkMode);
+    });
+  }
+
+  function updateThemeIcon(isDarkMode) {
+    const icon = themeToggle.querySelector('i');
+    if (isDarkMode) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+  }
+})();
+
+// Form and other functionality
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Initialize EmailJS
+  emailjs.init('UlZ5ORSMxR6zApCRO');
 
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
-      contactForm.style.display = 'none';
-      const thankYouMessage = document.getElementById('thank-you-message');
-      if (thankYouMessage) {
-        thankYouMessage.style.display = 'block';
+
+      const submitBtn = document.getElementById('submitBtn');
+      const visitorName = document.getElementById('visitor_name').value;
+      const visitorEmail = document.getElementById('visitor_email').value;
+      const messageContent = document.getElementById('message_content').value;
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
       }
-    });
-  }
 
-  const themeSwitcher = document.getElementById('theme-switcher');
-  if (themeSwitcher) {
-    const body = document.body;
-    let currentTheme = localStorage.getItem('theme');
-    if (!currentTheme) {
-      currentTheme = 'light-mode';
-      localStorage.setItem('theme', currentTheme);
-    }
-    body.classList.add(currentTheme);
+      // Send email using EmailJS
+      const templateParams = {
+        to_email: 'saddambubt65@gmail.com',
+        from_name: visitorName,
+        from_email: visitorEmail,
+        message: messageContent,
+        time: new Date().toLocaleString()
+      };
 
-    const icon = themeSwitcher.querySelector('i');
-    if (currentTheme === 'dark-mode') {
-      icon.classList.remove('fa-moon-o');
-      icon.classList.add('fa-sun-o');
-    } else {
-      icon.classList.remove('fa-sun-o');
-      icon.classList.add('fa-moon-o');
-    }
+      emailjs.send('service_c2ld34l', 'template_1b8tnfb', templateParams)
+        .then(function(response) {
+          console.log('Email sent successfully!', response);
+          
+          // Show thank you message
+          contactForm.style.display = 'none';
+          const thankYouMessage = document.getElementById('thank-you-message');
+          if (thankYouMessage) {
+            thankYouMessage.style.display = 'block';
+          }
 
-    themeSwitcher.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      let theme = 'light-mode';
-      if (body.classList.contains('dark-mode')) {
-        theme = 'dark-mode';
-        icon.classList.remove('fa-moon-o');
-        icon.classList.add('fa-sun-o');
-      } else {
-        icon.classList.remove('fa-sun-o');
-        icon.classList.add('fa-moon-o');
-      }
-      localStorage.setItem('theme', theme);
+          // Reset form
+          contactForm.reset();
+        }, function(error) {
+          console.error('Failed to send email:', error);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          }
+          alert('Failed to send message. Please try again or contact directly at saddambubt65@gmail.com');
+        });
     });
   }
 
