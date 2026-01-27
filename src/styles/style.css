@@ -706,6 +706,20 @@ body {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .education-item {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .education-item:hover {
   transform: translateY(-5px);
 }
@@ -720,6 +734,19 @@ body {
   gap: 0.75rem;
 }
 
+@media (max-width: 768px) {
+  .education-item h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-item h3 {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
+}
+
 .education-item h3 i {
   color: var(--primary-color);
 }
@@ -730,6 +757,15 @@ body {
   gap: 1rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .year-location-container {
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
+  }
 }
 
 .education-item .item-meta {
@@ -741,6 +777,18 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  .education-item .item-meta {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-item .item-meta {
+    font-size: 1rem;
+  }
+}
+
 .year-location-container p {
   font-size: 1rem;
   color: var(--text-color);
@@ -748,6 +796,18 @@ body {
   align-items: center;
   gap: 0.5rem;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .year-location-container p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .year-location-container p {
+    font-size: 0.85rem;
+  }
 }
 
 .year-location-container p i {
@@ -765,6 +825,23 @@ body {
   color: var(--text-color);
   position: relative;
   padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .education-item ul li {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-item ul li {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    padding-left: 1.25rem;
+  }
 }
 
 .education-item ul li::before {
