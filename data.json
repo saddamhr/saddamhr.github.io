@@ -1,10 +1,10 @@
 {
     "personalInfo": {
         "name": "Md. Saddam Hossain",
-        "title": "Software Engineer",
-        "profilePic": "https://randomuser.me/api/portraits/men/68.jpg",
-        "cvDownloadLink": "/Users/saddamhossain/cv-landing-page/Md_Saddam_Hossain_CV.pdf",
-        "aboutMe": "I am a software engineer with a passion for problem-solving and a relentless curiosity for learning. Through hard work, dedication, and unwavering persistence, I am committed to discovering effective solutions to intricate challenges. My ultimate goal is to achieve continuous personal and professional growth by pursuing a fulfilling and demanding career in software development."
+        "title": "Problem-Solver Software Engineer",
+        "profilePic": "assets/profile.png",
+        "cvDownloadLink": "assets/Md_Saddam_Hossain_CV.pdf",
+        "aboutMe": "Problem-solver software engineer with 5+ years of experience building frontend platforms for global teams. I partner closely with product and backend stakeholders to translate complex requirements into intuitive, reliable interfaces, and I care deeply about clean code, performance, and maintainability. I lead with curiosity, mentor teammates, and love shipping user-focused features that scale."
     },
     "skills": {
         "Programming Languages": [
@@ -21,7 +21,15 @@
                 "icon": "fab fa-python"
             }
         ],
-        "Frontend Development": [
+        "Frontend & UI": [
+            {
+                "name": "Angular",
+                "icon": "fab fa-angular"
+            },
+            {
+                "name": "AngularJS",
+                "icon": "fab fa-angular"
+            },
             {
                 "name": "React",
                 "icon": "fab fa-react"
@@ -31,12 +39,12 @@
                 "icon": "fas fa-code"
             },
             {
-                "name": "Angular",
-                "icon": "fab fa-angular"
-            },
-            {
                 "name": "Vue.js",
                 "icon": "fab fa-vuejs"
+            },
+            {
+                "name": "Lit",
+                "icon": "fas fa-bolt"
             },
             {
                 "name": "HTML",
@@ -56,38 +64,40 @@
             },
             {
                 "name": "Material-UI",
-                "icon": "fas fa-gem"
+                "icon": "fas fa-layer-group"
             },
             {
-                "name": "Redux",
-                "icon": "fas fa-sync-alt"
+                "name": "Angular Material",
+                "icon": "fas fa-shapes"
             }
         ],
-        "Backend Development": [
+        "Backend & APIs": [
             {
                 "name": "Node.js",
                 "icon": "fab fa-node-js"
-            },
-            {
-                "name": "Express.js",
-                "icon": "fas fa-server"
             },
             {
                 "name": "Django",
                 "icon": "fas fa-leaf"
             },
             {
-                "name": "Flask",
-                "icon": "fas fa-flask"
+                "name": "Django REST Framework",
+                "icon": "fas fa-network-wired"
             },
             {
                 "name": "RESTful API",
                 "icon": "fas fa-exchange-alt"
             },
             {
-                "name": "SQL",
-                "icon": "fas fa-database"
+                "name": "GraphQL",
+                "icon": "fas fa-project-diagram"
             },
+            {
+                "name": "Apollo Client",
+                "icon": "fas fa-satellite"
+            }
+        ],
+        "Databases": [
             {
                 "name": "PostgreSQL",
                 "icon": "fas fa-database"
@@ -99,9 +109,31 @@
             {
                 "name": "MongoDB",
                 "icon": "fas fa-database"
+            },
+            {
+                "name": "SQL",
+                "icon": "fas fa-database"
             }
         ],
-        "Tools & Technologies": [
+        "Quality & Delivery": [
+            {
+                "name": "Jest",
+                "icon": "fas fa-vial"
+            },
+            {
+                "name": "Redux",
+                "icon": "fas fa-sync-alt"
+            },
+            {
+                "name": "Code Review",
+                "icon": "fas fa-check-circle"
+            },
+            {
+                "name": "Agile Leadership",
+                "icon": "fas fa-users"
+            }
+        ],
+        "Tools & Platforms": [
             {
                 "name": "Git",
                 "icon": "fab fa-git-alt"
@@ -111,95 +143,89 @@
                 "icon": "fab fa-github"
             },
             {
+                "name": "GitLab",
+                "icon": "fab fa-gitlab"
+            },
+            {
                 "name": "Jira",
                 "icon": "fab fa-jira"
             },
             {
                 "name": "Docker",
                 "icon": "fab fa-docker"
-            },
-            {
-                "name": "AWS",
-                "icon": "fab fa-aws"
             }
         ]
     },
     "experience": [
         {
             "title": "Software Engineer, Frontend",
-            "company": "UJET.CX, San Francisco, California, United States - Remote",
+            "company": "UJET.CX — San Francisco, CA (Remote)",
             "duration": "May 2024 - Present",
             "responsibilities": [
-                "Developing and implementing new user-facing features using AngularJS.",
-                "Writing unit tests to ensure code reliability and maintainability.",
-                "Building reusable code and libraries for future use.",
-                "Participating in code reviews and ensuring code quality and standards are maintained.",
-                "Troubleshooting and debugging issues in production environments.",
-                "Collaborating with back-end developers and other stakeholders to integrate front-end and back-end functionalities.",
-                "Staying up-to-date with emerging front-end technologies and best practices."
+                "Delivering customer-facing features with AngularJS while partnering with backend teams for seamless integration.",
+                "Writing and maintaining unit tests to keep releases stable and predictable.",
+                "Building reusable UI components and shared libraries for faster delivery.",
+                "Participating in code reviews and championing frontend best practices.",
+                "Troubleshooting production issues and improving reliability." 
             ]
         },
         {
             "title": "Software Engineer, Team Lead",
-            "company": "SELISE DIGITAL PLATFORMS, Bangladesh",
+            "company": "SELISE Digital Platforms — Bangladesh",
             "duration": "June 2022 - May 2024",
             "responsibilities": [
-                "Developing and implementing new user-facing features using Angular.",
-                "Building reusable code and libraries for future use.",
-                "Participating in code reviews and ensuring code quality and standards are maintained.",
-                "Troubleshooting and debugging issues in production environments.",
-                "Collaborating with back-end developers and other stakeholders to integrate front-end and back-end functionalities.",
-                "Staying up-to-date with emerging front-end technologies and best practices.",
-                "Mentoring junior team members and contributing to the growth and development of the team.",
-                "Leading a team of engineers, and QA, coordinating tasks, and ensuring timely delivery of projects.",
-                "Establishing and enforcing clean code principles and guidelines to maintain code quality and consistency across the team."
+                "Led a cross-functional squad delivering complex Angular products for enterprise clients.",
+                "Mentored engineers, set clean-code standards, and improved review workflows.",
+                "Coordinated with QA and product to meet delivery timelines and quality goals.",
+                "Developed reusable components and aligned UI architecture across teams.",
+                "Integrated GraphQL and ERP capabilities using Angular, React, and Next.js." 
             ]
         },
         {
             "title": "Assistant Software Engineer",
-            "company": "ESECURESOFT Technologies LTD, Bangladesh",
+            "company": "eSecureSoft Technologies Ltd — Bangladesh",
             "duration": "October 2020 - June 2022",
             "responsibilities": [
-                "Analyzed user requirements and convert requirements to design documents.",
-                "Created clean, responsive and dynamic code with cross-browser compatibility.",
-                "Translation of design to code.",
-                "Integration of APIs to populate front-end components."
+                "Translated design specs into responsive, cross-browser UI components.",
+                "Integrated REST APIs and built reusable frontend modules.",
+                "Collaborated with stakeholders to turn requirements into design documentation." 
             ]
         },
         {
             "title": "Software Developer Intern",
-            "company": "Flyte Solutions, Bangladesh",
+            "company": "Flyte Solutions — Bangladesh",
             "duration": "August 2020 - October 2020",
             "responsibilities": [
-                "Designed, built and determined the structure of web pages. Ensured web design was optimized for all devices."
+                "Designed and optimized responsive web layouts for multiple devices.",
+                "Supported frontend development using HTML, CSS, and React." 
             ]
         }
     ],
     "projects": [
         {
-            "title": "GLOBAL BRAND ESHOP",
+            "title": "Global Brand eShop",
             "link": "#",
-            "description": "A comprehensive e-commerce solution comprises a dynamic admin panel for streamlined store management and an interactive client-side interface that empowers consumers to explore, compare, and place orders. Essential components include user authentication, secure payment processing, an intuitive product catalog, efficient order placement, and inventory management. Additionally, robust search and filtering capabilities enhance user experience, while responsive design ensures accessibility across various devices. This holistic approach to e-commerce ensures a user-friendly platform that both customers and administrators can rely on."
+            "description": "Enterprise-grade e-commerce platform with admin workflows, search, inventory, and payments. Built responsive UI flows that enabled fast merchandising and confident purchasing. Stack: Angular, Angular Material, Django, PostgreSQL."
         },
         {
-            "title": "RECRUITING WOMEN & MOMS",
+            "title": "Recruiting Women & Moms",
             "link": "#",
-            "description": "Recruiting Women & Moms is a job-matching platform that connects recruiters with women and moms looking for employment opportunities. The platform is built using Angular and has three key roles: recruiter, candidate (job seeker), and admin. Recruiters can post job listings and search for potential candidates based on their skills and experience. Candidates can create a profile, search for job listings, and apply for positions that match their qualifications. The admin role oversees the platform's overall operations and manages user accounts. The goal of this platform is to provide a more targeted and streamlined job search process for women and moms, while also helping recruiters find qualified candidates for their job openings."
+            "description": "Role-based hiring platform connecting recruiters with job seekers. Delivered recruiter search, candidate profiles, and admin tools for platform governance. Stack: Angular, Angular Material, .NET Core, MongoDB."
         },
         {
             "title": "ESL ERP",
             "link": "#",
-            "description": "Express Systems Limited (ESL) is the largest Information Technology Company in Bangladesh. We're building an enterprise resource planning (ERP) for ESL. In this ERP we cover all main modules like Configuration, Supply Chain, Accounting, Finance, Project Management, CRM, HRM, and Asset management."
+            "description": "Enterprise resource planning suite for supply chain, finance, HR, and CRM workflows. Built UI modules that handled complex business logic and data flows. Stack: HTML, CSS, JavaScript, jQuery, Django, PostgreSQL."
         },
         {
-            "title": "SECURE SOCIETY",
+            "title": "Secure Society",
             "link": "#",
-            "description": "A common system that covers all necessary scenarios for any kind of association / group with various events controlled by modules. This is a management system that will carry out and maintain tasks and services based on suitable needs."
+            "description": "Community management system for events, membership, and administrative workflows. Created consistent UI patterns and data-rich dashboards. Stack: React, Redux, Material-UI, Django, PostgreSQL."
         },
         {
-            "title": "HOP N SHOP",
+            "title": "Hop N Shop",
             "link": "#",
-            "description": "A multi-vendor e-commerce site where consumers are able to place orders by comparing prices/offers of different shops/vendors based on location."
+            "description": "Multi-vendor marketplace enabling location-based price comparison and ordering. Implemented storefront flows and vendor management. Stack: Angular, Angular Material, Django, PostgreSQL."
         }
     ],
     "education": [
@@ -214,8 +240,8 @@
             ]
         },
         {
-            "degree": "Intermediate of science",
-            "institution": "Government K.M.H Degree COLLEGE",
+            "degree": "Intermediate of Science",
+            "institution": "Government K.M.H Degree College",
             "year": "2012 - 2014",
             "icon": "fas fa-school",
             "details": [
@@ -238,6 +264,11 @@
             "name": "GitHub",
             "url": "https://github.com/saddamhr",
             "icon": "fa-brands fa-github"
+        },
+        {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/saddamhr",
+            "icon": "fa-solid fa-code"
         },
         {
             "name": "Medium",

@@ -1,21 +1,16 @@
-// Simple hamburger menu toggle
 (function() {
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
   
   if (!hamburger || !navMenu) {
-    console.error('Hamburger or nav menu element not found');
     return;
   }
 
-  // Toggle menu on hamburger click
   hamburger.addEventListener('click', function() {
-    console.log('Hamburger clicked');
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
   });
 
-  // Close menu when any nav link is clicked
   const navLinks = navMenu.querySelectorAll('a');
   navLinks.forEach(function(link) {
     link.addEventListener('click', function() {
@@ -24,7 +19,6 @@
     });
   });
 
-  // Close menu when clicking outside
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.main-nav')) {
       hamburger.classList.remove('active');
@@ -33,21 +27,17 @@
   });
 })();
 
-// Theme toggle functionality
 (function() {
   const themeToggle = document.getElementById('themeToggle');
   const body = document.body;
 
-  // Check for saved theme preference or default to light mode
   const currentTheme = localStorage.getItem('theme') || 'light-mode';
   
-  // Apply saved theme on page load
   if (currentTheme === 'dark-mode') {
     body.classList.add('dark-mode');
     updateThemeIcon(true);
   }
 
-  // Handle theme toggle click
   if (themeToggle) {
     themeToggle.addEventListener('click', function() {
       body.classList.toggle('dark-mode');
@@ -70,10 +60,26 @@
   }
 })();
 
-// Form and other functionality
+(function() {
+  const nav = document.getElementById('mainNav');
+  const spacer = document.getElementById('navSpacer');
+  if (!nav || !spacer) {
+    return;
+  }
+
+  function updateSticky() {
+    const isSticky = window.scrollY > 8;
+    nav.classList.toggle('is-sticky', isSticky);
+    spacer.style.height = isSticky ? `${nav.offsetHeight}px` : '0px';
+  }
+
+  updateSticky();
+  window.addEventListener('scroll', updateSticky, { passive: true });
+  window.addEventListener('resize', updateSticky);
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Initialize EmailJS
   emailjs.init('UlZ5ORSMxR6zApCRO');
 
   const contactForm = document.getElementById('contact-form');
@@ -91,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.textContent = 'Sending...';
       }
 
-      // Send email using EmailJS
       const templateParams = {
         to_email: 'saddambubt65@gmail.com',
         from_name: visitorName,
@@ -101,17 +106,13 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
       emailjs.send('service_c2ld34l', 'template_1b8tnfb', templateParams)
-        .then(function(response) {
-          console.log('Email sent successfully!', response);
-          
-          // Show thank you message
+        .then(function() {
           contactForm.style.display = 'none';
           const thankYouMessage = document.getElementById('thank-you-message');
           if (thankYouMessage) {
             thankYouMessage.style.display = 'block';
           }
 
-          // Reset form
           contactForm.reset();
         }, function(error) {
           console.error('Failed to send email:', error);
@@ -247,3 +248,24 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch((error) => console.error('Error loading CV data:', error));
 });
+
+(function() {
+  const targets = document.querySelectorAll('.section');
+  if (!targets.length) return;
+
+  targets.forEach((section) => section.classList.add('reveal'));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  targets.forEach((section) => observer.observe(section));
+})();
