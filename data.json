@@ -1,10 +1,10 @@
 {
     "personalInfo": {
         "name": "Md. Saddam Hossain",
-        "title": "Problem-Solver Software Engineer",
+        "title": "Software Engineer II",
         "profilePic": "assets/profile.png",
         "cvDownloadLink": "assets/Md_Saddam_Hossain_CV.pdf",
-        "aboutMe": "Problem-solver software engineer with 5+ years of experience building frontend platforms for global teams. I partner closely with product and backend stakeholders to translate complex requirements into intuitive, reliable interfaces, and I care deeply about clean code, performance, and maintainability. I lead with curiosity, mentor teammates, and love shipping user-focused features that scale."
+        "aboutMe": "Software Engineer with 5.5+ years of experience building scalable web applications across CX platforms, enterprise SaaS, SDKs, ERP, and e-commerce. I take ownership of complex frontend systems, collaborate across teams in high-availability environments, and care deeply about clean code, accessibility (WCAG/a11y), and test-driven development."
     },
     "skills": {
         "Programming Languages": [
@@ -47,6 +47,18 @@
                 "icon": "fas fa-bolt"
             },
             {
+                "name": "Material-UI",
+                "icon": "fas fa-layer-group"
+            },
+            {
+                "name": "Angular Material",
+                "icon": "fas fa-shapes"
+            },
+            {
+                "name": "Tailwind CSS",
+                "icon": "fas fa-wind"
+            },
+            {
                 "name": "HTML",
                 "icon": "fab fa-html5"
             },
@@ -57,18 +69,6 @@
             {
                 "name": "Sass",
                 "icon": "fab fa-sass"
-            },
-            {
-                "name": "Tailwind CSS",
-                "icon": "fas fa-wind"
-            },
-            {
-                "name": "Material-UI",
-                "icon": "fas fa-layer-group"
-            },
-            {
-                "name": "Angular Material",
-                "icon": "fas fa-shapes"
             }
         ],
         "Backend & APIs": [
@@ -99,38 +99,30 @@
         ],
         "Databases": [
             {
-                "name": "PostgreSQL",
-                "icon": "fas fa-database"
-            },
-            {
-                "name": "MySQL",
-                "icon": "fas fa-database"
-            },
-            {
                 "name": "MongoDB",
                 "icon": "fas fa-database"
             },
             {
-                "name": "SQL",
+                "name": "PostgreSQL",
                 "icon": "fas fa-database"
             }
         ],
-        "Quality & Delivery": [
+        "Testing": [
             {
                 "name": "Jest",
                 "icon": "fas fa-vial"
             },
             {
-                "name": "Redux",
-                "icon": "fas fa-sync-alt"
+                "name": "Vitest",
+                "icon": "fas fa-flask"
             },
             {
-                "name": "Code Review",
-                "icon": "fas fa-check-circle"
+                "name": "Unit Testing",
+                "icon": "fas fa-check-double"
             },
             {
-                "name": "Agile Leadership",
-                "icon": "fas fa-users"
+                "name": "End-to-end (E2E)",
+                "icon": "fas fa-route"
             }
         ],
         "Tools & Platforms": [
@@ -151,53 +143,111 @@
                 "icon": "fab fa-jira"
             },
             {
-                "name": "Docker",
-                "icon": "fab fa-docker"
+                "name": "VS Code",
+                "icon": "fas fa-code"
+            }
+        ],
+        "Concepts": [
+            {
+                "name": "Clean Code",
+                "icon": "fas fa-broom"
+            },
+            {
+                "name": "Accessibility (WCAG/a11y)",
+                "icon": "fas fa-universal-access"
+            },
+            {
+                "name": "Code Review",
+                "icon": "fas fa-check-circle"
+            },
+            {
+                "name": "Production Debugging",
+                "icon": "fas fa-bug"
+            }
+        ],
+        "Languages": [
+            {
+                "name": "English",
+                "icon": "fas fa-language"
+            },
+            {
+                "name": "Bengali",
+                "icon": "fas fa-language"
             }
         ]
     },
     "experience": [
         {
-            "title": "Software Engineer, Frontend",
+            "title": "Software Engineer II",
             "company": "UJET.CX — San Francisco, CA (Remote)",
-            "duration": "May 2024 - Present",
+            "duration": "June 2022 - Present",
             "responsibilities": [
-                "Delivering customer-facing features with AngularJS while partnering with backend teams for seamless integration.",
-                "Writing and maintaining unit tests to keep releases stable and predictable.",
-                "Building reusable UI components and shared libraries for faster delivery.",
-                "Participating in code reviews and championing frontend best practices.",
-                "Troubleshooting production issues and improving reliability." 
+                "Developed core Admin Portal features that improved customer experience and operational efficiency.",
+                "Implemented dynamic queue positioning, localization, and configuration-driven workflows.",
+                "Resolved critical production bugs with minimal downtime and owned complex customer escalations.",
+                "Contributed to the UJET Web SDK with Google engineers, shipping Custom Forms and WCAG/a11y improvements.",
+                "Promoted to Software Engineer II for high-impact delivery, clean code, and test coverage." 
+            ],
+            "subroles": [
+                {
+                    "title": "Software Engineer — Core Admin Portal",
+                    "responsibilities": [
+                        "Developed core Admin Portal features directly impacting customer experience and operational efficiency.",
+                        "Implemented dynamic queue positioning, language localization, and configuration-driven workflows.",
+                        "Resolved critical production bugs affecting live customers with minimal downtime.",
+                        "Maintained clean, reusable code through strict reviews and unit tests using Jest."
+                    ]
+                },
+                {
+                    "title": "Software Engineer — Web SDK",
+                    "responsibilities": [
+                        "Contributed to UJET Web SDK in collaboration with Google engineering teams.",
+                        "Delivered critical epics including Custom Forms and Accessibility (WCAG / a11y) improvements.",
+                        "Improved SDK codebase by introducing and enforcing linting standards, enhancing maintainability, consistency, and overall developer experience.",
+                        "Proactively fixed potential production issues before customer impact."
+                    ]
+                },
+                {
+                    "title": "Software Engineer II — Core Calling Functionality",
+                    "responsibilities": [
+                        "Promoted to Software Engineer II and transitioned to core calling functionality team.",
+                        "Owned complex customer escalations directly from production environments.",
+                        "Resolved a high-impact after-hours issue where call deflection logic was not honored, restoring correct system behavior.",
+                        "Ensured long-term stability via clean code practices and maintained test coverage."
+                    ]
+                }
             ]
         },
         {
-            "title": "Software Engineer, Team Lead",
+            "title": "Software Engineer (Team Lead)",
             "company": "SELISE Digital Platforms — Bangladesh",
-            "duration": "June 2022 - May 2024",
+            "duration": "October 2020 - May 2024",
             "responsibilities": [
-                "Led a cross-functional squad delivering complex Angular products for enterprise clients.",
-                "Mentored engineers, set clean-code standards, and improved review workflows.",
-                "Coordinated with QA and product to meet delivery timelines and quality goals.",
-                "Developed reusable components and aligned UI architecture across teams.",
-                "Integrated GraphQL and ERP capabilities using Angular, React, and Next.js." 
+                "Led frontend development of a high-impact MVP from scratch, owning planning, estimation, and delivery.",
+                "Managed and mentored engineers while collaborating with backend, QA, and product teams.",
+                "Delivered an MVP 3 months ahead of schedule with strong engineering quality standards.",
+                "Established reusable architecture and clean code standards adopted across the team.",
+                "Recovered a vulnerable project team and solved a complex crypto app blocker." 
             ]
         },
         {
             "title": "Assistant Software Engineer",
             "company": "eSecureSoft Technologies Ltd — Bangladesh",
-            "duration": "October 2020 - June 2022",
+            "duration": "August 2020 - October 2020",
             "responsibilities": [
-                "Translated design specs into responsive, cross-browser UI components.",
-                "Integrated REST APIs and built reusable frontend modules.",
-                "Collaborated with stakeholders to turn requirements into design documentation." 
+                "Translated business requirements into frontend designs and implementations.",
+                "Built responsive, cross-browser compatible user interfaces.",
+                "Integrated REST APIs with frontend applications." 
             ]
         },
         {
             "title": "Software Developer Intern",
             "company": "Flyte Solutions — Bangladesh",
-            "duration": "August 2020 - October 2020",
+            "duration": "June 2020 - August 2020",
             "responsibilities": [
-                "Designed and optimized responsive web layouts for multiple devices.",
-                "Supported frontend development using HTML, CSS, and React." 
+                "Designed and developed responsive web pages optimized for multiple devices.",
+                "Assisted in frontend development using React and modern JavaScript.",
+                "Collaborated with senior engineers to implement UI features and fix bugs." 
             ]
         }
     ],
@@ -205,27 +255,12 @@
         {
             "title": "Global Brand eShop",
             "link": "#",
-            "description": "Enterprise-grade e-commerce platform with admin workflows, search, inventory, and payments. Built responsive UI flows that enabled fast merchandising and confident purchasing. Stack: Angular, Angular Material, Django, PostgreSQL."
+            "description": "Built a full-scale e-commerce platform with admin and client-facing applications, including authentication, secure payments, product catalog, and inventory management. Tech: Angular, Angular Material, Django, PostgreSQL."
         },
         {
             "title": "Recruiting Women & Moms",
             "link": "#",
-            "description": "Role-based hiring platform connecting recruiters with job seekers. Delivered recruiter search, candidate profiles, and admin tools for platform governance. Stack: Angular, Angular Material, .NET Core, MongoDB."
-        },
-        {
-            "title": "ESL ERP",
-            "link": "#",
-            "description": "Enterprise resource planning suite for supply chain, finance, HR, and CRM workflows. Built UI modules that handled complex business logic and data flows. Stack: HTML, CSS, JavaScript, jQuery, Django, PostgreSQL."
-        },
-        {
-            "title": "Secure Society",
-            "link": "#",
-            "description": "Community management system for events, membership, and administrative workflows. Created consistent UI patterns and data-rich dashboards. Stack: React, Redux, Material-UI, Django, PostgreSQL."
-        },
-        {
-            "title": "Hop N Shop",
-            "link": "#",
-            "description": "Multi-vendor marketplace enabling location-based price comparison and ordering. Implemented storefront flows and vendor management. Stack: Angular, Angular Material, Django, PostgreSQL."
+            "description": "Developed a job-matching platform connecting recruiters with women and mothers, supporting recruiter, candidate, and admin workflows. Tech: Angular, Angular Material, .NET Core, MongoDB."
         }
     ],
     "education": [

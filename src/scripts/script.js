@@ -170,12 +170,38 @@ document.addEventListener('DOMContentLoaded', function() {
         data.experience.forEach((exp) => {
           const expItem = document.createElement('div');
           expItem.classList.add('experience-item');
-          expItem.innerHTML = `
-              <h3>${exp.title}</h3>
-              <p class="item-meta">${exp.company} | ${exp.duration}</p>
+          const responsibilitiesHtml = exp.subroles
+            ? ''
+            : `
               <ul>
                   ${exp.responsibilities.map((resp) => `<li>${resp}</li>`).join('')}
               </ul>
+            `;
+          const subrolesHtml = exp.subroles
+            ? `
+              <div class="experience-subroles">
+                ${exp.subroles
+                  .map(
+                    (role) => `
+                      <div class="experience-subrole">
+                        <h4>${role.title}</h4>
+                        <ul>
+                          ${role.responsibilities
+                            .map((resp) => `<li>${resp}</li>`)
+                            .join('')}
+                        </ul>
+                      </div>
+                    `
+                  )
+                  .join('')}
+              </div>
+            `
+            : '';
+          expItem.innerHTML = `
+              <h3>${exp.title}</h3>
+              <p class="item-meta">${exp.company} | ${exp.duration}</p>
+              ${responsibilitiesHtml}
+              ${subrolesHtml}
           `;
           experienceSection.appendChild(expItem);
         });
@@ -186,9 +212,14 @@ document.addEventListener('DOMContentLoaded', function() {
         data.projects.forEach((project) => {
           const projectItem = document.createElement('div');
           projectItem.classList.add('project-item');
+          const hasLiveLink = project.link && project.link !== '#';
           projectItem.innerHTML = `
               <h3>${project.title}</h3>
-              <p class="item-meta"><a href="${project.link}" target="_blank">Live link</a></p>
+              <p class="item-meta">${
+                hasLiveLink
+                  ? `<a href="${project.link}" target="_blank">Live link</a>`
+                  : ''
+              }</p>
               <p>${project.description}</p>
           `;
           projectsSection.appendChild(projectItem);
@@ -268,4 +299,49 @@ document.addEventListener('DOMContentLoaded', function() {
   );
 
   targets.forEach((section) => observer.observe(section));
+})();
+
+(function() {
+  const navLinks = document.querySelectorAll('.main-nav .nav-right a');
+  if (!navLinks.length) return;
+
+  const sectionMap = new Map();
+  navLinks.forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+    const section = document.querySelector(href);
+    if (section) {
+      sectionMap.set(section, link);
+    }
+  });
+
+  const sections = Array.from(sectionMap.keys());
+  if (!sections.length) return;
+
+  function setActiveSection(activeSection) {
+    navLinks.forEach((link) => link.classList.remove('active'));
+    const activeLink = sectionMap.get(activeSection);
+    if (activeLink) {
+      activeLink.classList.add('active');
+    }
+  }
+
+  function updateActiveSection() {
+    const nav = document.getElementById('mainNav');
+    const offset = nav ? nav.offsetHeight + 12 : 72;
+    let currentSection = sections[0];
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top - offset <= 0) {
+        currentSection = section;
+      }
+    });
+
+    setActiveSection(currentSection);
+  }
+
+  updateActiveSection();
+  window.addEventListener('scroll', updateActiveSection, { passive: true });
+  window.addEventListener('resize', updateActiveSection);
 })();
